@@ -96,19 +96,19 @@ export class LinkedList {
   // 10. toString(): Return the whole list in string format
   toString() {
     let current = this.head;
-    let result = "";
+    let result = '';
     while (current) {
       result += `( ${current.value} ) -> `;
       current = current.nextNode;
     }
-    result += "null";
+    result += 'null';
     return result;
   }
 
-// 11. insertAt(index, value): Add the new node based on given new index
+  // 11. insertAt(index, value): Add the new node based on given new index
   insertAt(index, value) {
     if (index < 0 || index > this.size()) {
-      throw new RangeError("Index out of bounds");
+      throw new RangeError('Index out of bounds');
     }
     if (index === 0) {
       this.prepend(value);
@@ -129,7 +129,7 @@ export class LinkedList {
   // 12. removeAt(index): Remove the node based no the given index
   removeAt(index) {
     if (index < 0 || index >= this.size()) {
-      throw new RangeError("Index out of bounds");
+      throw new RangeError('Index out of bounds');
     }
     if (index === 0) {
       return this.pop();
